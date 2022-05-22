@@ -49,13 +49,13 @@ class EthSign
      * @param string $adress
      * @return bool
      */
-    public function verify(string $msg, string $sign, string $adress)
+    public function verify(string $msg, string $sign, string $address)
     {
         if (strlen($sign) !== 132 ) {
             throw new InvalidArgumentException('Invalid signature length.');
         }
 
-        $adress = strtolower($adress);
+        $address = strtolower($address);
 
         $r = substr($sign,2,64);
         $s = substr($sign,66,64);
