@@ -75,7 +75,7 @@ class EthSign
 
         $publicAddress = strtolower($this->publicKeyToAddress($publicKey));
 
-        return $publicAddress;
+        return $publicAddress == $address;
     }
 
     /**
